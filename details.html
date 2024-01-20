@@ -1,0 +1,442 @@
+<!-- 
+    Descripción: Este archivo HTML contiene la página de detalles sobre la guitarra.
+    Estructura general:
+    -Encabezado
+    -Contenido principal
+    -Pie de página 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="css/details.css">
+    <script src="js/details.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Kanit:wght@100;200;300;400;500;600;700;800;900&family=Krona+One&family=Montserrat:wght@400;500;700&family=Mulish:ital,wght@1,200&family=Nunito&family=Raleway:wght@400;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 
+        Encabezado de la página
+        Descripción: Contiene el logotipo de la marca, un boton de menu y un menu de navegación 
+    -->
+    <header class="header">
+        <!-- Logo de la marca -->
+        <h1 class="header__h1">
+            <a href="index.html" class="header__logo" title="Takamine Logo">
+                <picture>
+                    <source srcset="assets/takamine/logo.png" media="screen and (max-width:360px)">
+                    <img class="header__img" src="assets/takamine/logo.png" alt="Takamine Logo">
+                </picture>
+            </a>
+        </h1>
+        <!-- Botón del menú desplegable -->
+        <button class="header__button" title="Menu Button">
+            <span class="header__div"></span>
+            <span class="header__div"></span>
+            <span class="header__div"></span>
+        </button>
+        <!-- Menú de navegación -->
+        <nav class="header__nav">
+            <!-- Lista de enlaces -->
+            <ul class="header__ul">
+                <li class="header__li">
+                    <a class="header__a" href="index.html" title="Home">HOME</a>
+                </li>
+                <li class="header__li">
+                    <a class="header__a" href="index.html" title="About Us">ABOUT</a>
+                </li>
+                <li class="header__li">
+                    <a class="header__a" href="guitars.html" title="Guitars">GUITARS</a>
+                </li>
+                <li class="header__li">
+                    <a class="header__a" href="guitars.html" title="Guitar Series">GSERIES</a>
+                </li>
+            </ul>
+            <!-- Otra lista de enlaces -->
+            <ul class="header__ul">
+                <li class="header__li">
+                    <a class="header__a" href="index.html" title="Electronics">ELECTRONICS</a>
+                </li>
+                <li class="header__li">
+                    <a class="header__a" href="index.html" title="Accessories">ACCESSORIES</a>
+                </li>
+                <li class="header__li">
+                    <a class="header__a" href="index.html" title="Featured Artists">ARTISTS</a>
+                </li>
+                <li class="header__li">
+                    <a class="header__a" href="index.html" title="Customer Support">SUPPORT</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Final del encabezado de la página -->
+
+    <!-- 
+        Contenido principal de la página
+        Descripción: Este es el contenido principal del sitio web
+        Estructura general:
+        -Botón de contacto y Formulario oculto
+        -Sección de Producto 
+    -->
+    <main class="main">
+        <!-- Boton de contacto fijo en la pantalla -->
+        <div class="contact">
+            <button class="contact__button">contact us</button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="contact__svg"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+        </div>
+        <!-- Contenedor de contacto oculto -->
+        <div class="contact__form">
+            <div class="contact__wrapper">
+                <span class="contact__span">Find your local distributor</span>
+                <!-- Formulario de contacto -->
+                <form method="" action="" class="form">
+                    <div class="form__group name">
+                        <label for="name" class="form__label">Name</label>
+                        <input type="text" id="name" name="name" class="form__input" required>
+                    </div>
+
+                    <div class="form__group surname">
+                        <label for="surname" class="form__label">Surname</label>
+                        <input type="text" id="surname" name="surname" class="form__input" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="email" class="form__label">Email</label>
+                        <input type="email" id="email" name="email" class="form__input" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="phone" class="form__label">Phone number</label>
+                        <input type="text" id="phone" name="phone" class="form__input" placeholder="(OPTIONAL)">
+                    </div>
+
+                    <div class="form__group">
+                        <label for="distributor" class="form__label">Select your distributor</label>
+                        <input list="distributors" id="distributor" name="distributor" class="form__input">
+                        <datalist id="distributors">
+                            <option class="form__option" value="Bangladesh">Asia</option>
+                            <option class="form__option" value="China">Asia</option>
+                            <option class="form__option" value="Hong Kong">Asia</option>
+                            <option class="form__option" value="Indonesia">Asia</option>
+                            <option class="form__option" value="Kazakhstan">Asia</option>
+                            <option class="form__option" value="Korea (South)">Asia</option>
+                            <option class="form__option" value="Malaysia">Asia</option>
+                            <option class="form__option" value="Nepal">Asia</option>
+                            <option class="form__option" value="New Caledonia">Asia</option>
+                            <option class="form__option" value="Philippines">Asia</option>
+                            <option class="form__option" value="Singapore">Asia</option>
+                            <option class="form__option" value="Sri Lanka">Asia</option>
+                            <option class="form__option" value="Taiwan, R.O.C.">Asia</option>
+                            <option class="form__option" value="Thailand">Asia</option>
+                            <option class="form__option" value="Vietnam">Asia</option>
+
+                            <option class="form__option" value="United Kingdom and Ireland">Europe</option>
+                            <option class="form__option" value="Italy">Europe</option>
+                            <option class="form__option" value="Denmark">Europe</option>
+                            <option class="form__option" value="Finland">Europe</option>
+                            <option class="form__option" value="Norway">Europe</option>
+                            <option class="form__option" value="Sweden">Europe</option>
+                            <option class="form__option" value="Baltic States">Europe</option>
+                            <option class="form__option" value="Germany, Austria, Switzerland">Europe</option>
+                            <option class="form__option" value="Switzerland">Europe</option>
+                            <option class="form__option" value="Poland">Europe</option>
+                            <option class="form__option" value="Croatia">Europe</option>
+                            <option class="form__option" value="France">Europe</option>
+                            <option class="form__option" value="Spain and Portugal">Europe</option>
+                            <option class="form__option" value="Benelux">Europe</option>
+                            <option class="form__option" value="Slovakia, Czech Republic, Hungary">Europe</option>
+                            <option class="form__option" value="Russia, Belarus, Georgia, Azerbaijan">Europe</option>
+                            <option class="form__option" value="Ukraine">Europe</option>
+                            <option class="form__option" value="Romania">Europe</option>
+                            <option class="form__option" value="Greece">Europe</option>
+                            <option class="form__option" value="Cyprus">Europe</option>
+                            <option class="form__option"
+                                value="Serbia, Bosnia and Herzegovina, Macedonia, Kosovo, Montenegro">Europe
+                            </option>
+                            <option class="form__option" value="Bulgaria">Europe</option>
+                            <option class="form__option" value="Slovenia">Europe</option>
+
+                            <option class="form__option" value="United States">North America</option>
+                            <option class="form__option" value="Canada">North America</option>
+                            <option class="form__option" value="Mexico">North America</option>
+
+                            <option class="form__option" value="Australia">Australia / New Zealand</option>
+                            <option class="form__option" value="New Zealand">Australia / New Zealand</option>
+
+                            <option class="form__option" value="Tahiti">Oceania</option>
+
+                            <option class="form__option" value="Argentina">Central & South America</option>
+                            <option class="form__option" value="Brazil">Central & South America</option>
+                            <option class="form__option" value="Chile">Central & South America</option>
+                            <option class="form__option" value="Uruguay">Central & South America</option>
+                            <option class="form__option" value="Guatemala">Central & South America</option>
+                            <option class="form__option" value="Bolivia">Central & South America</option>
+                            <option class="form__option" value="Paraguay">Central & South America</option>
+                            <option class="form__option" value="Peru">Central & South America</option>
+
+                            <option class="form__option" value="Israel">Middle East & Africa</option>
+                            <option class="form__option" value="South Africa">Middle East & Africa</option>
+                            <option class="form__option" value="Turkey">Middle East & Africa</option>
+                            <option class="form__option" value="United Arab Emirates">Middle East & Africa</option>
+                        </datalist>
+                    </div>
+
+                    <div class="form__group checkbox">
+                        <input type="checkbox" id="subscribe" name="subscribe" class="form__input">
+                        <span class="form__span">I agree to receive communications by email or phone from Takamine to
+                            stay
+                            updated about the brand news and events.</span>
+                    </div>
+
+                    <span class="form__span">By clicking the submit button, you confirm you have read and agree to the
+                        <a href="index.html" class="form__a">privacy policy.</a></span>
+
+                    <button type="button" class="form__button" title="Close">Submit</button>
+                </form>
+                <button class="close__button" title="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="form__svg"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Contenedor de texto oculto -->
+            <div class="contact__confirm">
+                <p class="contact__p heading">Thank you for reaching out to us! We have received your inquiry and
+                    appreciate
+                    your interest in our guitars. Our team at Takamine will review your message and get back to you as
+                    soon
+                    as possible.
+                <p class="contact__p">
+                    In the meantime, feel free to explore our latest guitar collections and stay tuned for updates on
+                    exciting promotions and events.
+
+                    Should you have any urgent questions or concerns, don't hesitate to contact us directly.</p>
+
+                <p class="contact__p">Once again, thank you for choosing Takamine. We look forward to assisting you in
+                    finding the perfect guitar that suits your musical journey.</p>
+
+                <p class="contact__p">Best regards, The Takamine Team.</p>
+                <button class="close__button" title="Close">Close</button>
+            </div>
+        </div>
+        <!-- Seccion de producto -->
+        <div class="product">
+            <!-- Contenedor principal -->
+            <div class="product__wrapper">
+                <!-- Columnas de imágenes de muestra -->
+                <div class="product__columns">
+                    <div class="product__column aside">
+                        <div class="aside__column">
+                            <picture>
+                                <source srcset="assets/guitars/70series/gn75ce-tbk/gn75ce-tbk_banner.png" media="screen and (max-width:360px)">
+                                <img src="assets/guitars/70series/gn75ce-tbk/gn75ce-tbk_banner.png" alt="Guitar Image"
+                                class="product__img" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="aside__column">
+                            <picture>
+                                <source srcset="assets/guitars/70series/gn75ce-tbk/bf63ca2690b7.jpg" media="screen and (max-width:360px)">
+                                <img src="assets/guitars/70series/gn75ce-tbk/bf63ca2690b7.jpg" alt="Guitar Image"
+                                class="product__img" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="aside__column">
+                            <picture>
+                                <source srcset="assets/guitars/70series/gn75ce-tbk/e3ef0fbf9448_2.jpg" media="screen and (max-width:360px)">
+                                <img src="assets/guitars/70series/gn75ce-tbk/e3ef0fbf9448_2.jpg" alt="Guitar Image"
+                                class="product__img" loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+                    <!-- Imagen principal -->
+                    <div class="product__column hero__column">
+                        <picture>
+                            <source srcset="assets/guitars/70series/gn75ce-tbk/gn75ce-tbk_banner.png" media="screen and (max-width:360px)">
+                            <img src="assets/guitars/70series/gn75ce-tbk/gn75ce-tbk_banner.png" alt="Guitar Image"
+                            class="hero__img" loading="lazy">
+                        </picture>
+                    </div>
+                    <!-- Descripcion del producto -->
+                    <div class="product__column text__column">
+                        <div class="product__text">
+                            <span class="product__span">D-X1E</span>
+                            <p class="product__p">
+                                Featuring Takamine’s compact but big-sounding NEX body style, solid-top construction,
+                                elegant appointments and an upgraded electronics system, the GN71CE is a sleek and
+                                stylish acoustic/electric guitar that is all about great looks and premium sound
+                                quality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Informacion adicional del producto -->
+                <div class="product__info">
+                    <!-- Contenedor principal -->
+                    <div class="info__wrapper">
+                        <!-- Cabecera de botones -->
+                        <div class="info__heading">
+                            <div class="info__button">Description</div>
+                            <div class="info__button">Specifications</div>
+                        </div>
+                        <!-- Descripcion del producto-->
+                        <p class="info__p desc visible">With its mighty jumbo body style, solid-top construction,
+                            stunning
+                            cosmetic
+                            features and premium electronics, the GJ72CE is a commanding acoustic/electric guitar that
+                            is built to perform.
+
+                            Featuring a solid spruce top and flame maple back and sides, the GJ72CE produces all the
+                            volume and robust sound that players expect from a jumbo guitar. The slim mahogany neck and
+                            12”-radius bound laurel fingerboard provide great feel and playability, while the onboard
+                            Takamine TK-40D preamp system gives you a built-in tuner, three-band EQ and gain controls,
+                            mid contour switch, notch filter and EQ bypass switch for the ultimate in versatility and
+                            sound quality.
+
+                            Other great features include a synthetic bone nut and split bridge saddle, laurel headcap,
+                            abalone rosette, abalone "reversed mountain" inlay at the 12th fret, gold die-cast tuners
+                            with pearl buttons, and a beautiful gloss finish. Available in Natural and Sunburst.
+                        </p>
+                        <!-- Especificaciones del producto -->
+                        <div class="info__p spec">
+                            <!-- Lista de caracteristicas -->
+                            <ul class="spec__ul">
+                                <li class="spec__li">
+                                    <p class="spec__p">Top</p>
+                                    <p class="spec__p">Solid Spruce</p>
+                                </li>
+                                <li class="spec__li">
+                                    <p class="spec__p">Back</p>
+                                    <p class="spec__p">Flamed Maple</p>
+                                </li>
+                                <li class="spec__li">
+                                    <p class="spec__p">Sides</p>
+                                    <p class="spec__p">Flamed Maple</p>
+                                </li>
+                                <li class="spec__li">
+                                    <p class="spec__p">Neck</p>
+                                    <p class="spec__p">Solid Spruce</p>
+                                </li>
+                                <li class="spec__li">
+                                    <p class="spec__p">Finger Board</p>
+                                    <p class="spec__p">Laurel</p>
+                                </li>
+                                <li class="spec__li">
+                                    <p class="spec__p">Nut Width</p>
+                                    <p class="spec__p">42.5mm</p>
+                                </li>
+                                <li class="spec__li">
+                                    <p class="spec__p">Electronics</p>
+                                    <p class="spec__p">TP-4TD</p>
+                                </li>
+                                <li class="spec__li">
+                                    <p class="spec__p">Finish</p>
+                                    <p class="spec__p">Transparent Black</p>
+                                </li>
+                            </ul>
+                            <!-- Texto descriptivo -->
+                            <div class="spec__text">
+                                <span class="spec__span">Nex Body</span>
+                                <p class="spec__p">This original Takamine body is a scaled-down Jumbo at heart. The NEX
+                                    has a silky balance to the tone that supports vocals beautifully.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Final del contenido principal -->
+
+    <!-- 
+        Pie de página
+        Descripción: Este es el pie de página del sitio web.
+        Estructura general:
+        -Sección legal
+        -Lista de enlaces a redes sociales
+     -->
+    <footer class="footer">
+        <!-- Contenedor principal -->
+        <div class="footer__wrapper">
+            <!-- Seccion legal y copyright -->
+            <div class="legal">
+                <div class="credits">
+                    <picture>
+                        <source srcset="assets/takamine/core.png" media="screen and (max-width:360px)">
+                        <img src="assets/takamine/core.png" alt="BubbleUp Logo" class="credits__img" loading="lazy">
+                    </picture>
+                </div>
+                <div class="copyright">
+                    <p class="copyright__heading">Copyright © 2023 Takamine Guitars. All Rights Reserved.</p>
+                    <ul class="copyright__ul">
+                        <li class="copyright__li">
+                            <a href="index.html" title="Terms of Use">Terms of use</a>
+                        </li>
+                        <li class="copyright__li">
+                            <a href="index.html" title="Privacy Policy">Privacy Policy</a>
+                        </li>
+                        <li class="copyright__li">
+                            <a href="index.html" title="Contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Lista de enlaces a redes sociales -->
+            <ul class="rrss">
+                <li class="rrss__li">
+                    <a class="rrss__a" href="https://www.facebook.com/TakamineGuitars" title="Follow us on Facebook" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-facebook rrss__svg" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="rrss__li">
+                    <a class="rrss__a" href="https://twitter.com/i/flow/login?redirect_after_login=%2Ftakamineguitars" title="Follow us on Twitter" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-twitter-x rrss__svg" viewBox="0 0 16 16">
+                            <path
+                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="rrss__li">
+                    <a class="rrss__a" href="https://www.youtube.com/user/takamineguitars" title="Subscribe on YouTube" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-youtube rrss__svg" viewBox="0 0 16 16">
+                            <path
+                                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="rrss__li">
+                    <a class="rrss__a" href="https://www.instagram.com/takamineguitars_official/" title="Follow us on Instagram" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-instagram rrss__svg" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- Final del pie de página -->
+    
+</body>
+
+</html>

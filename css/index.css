@@ -1,0 +1,1467 @@
+/* 
+index.css
+- Reset / Normalizar
+- Header
+- Hero
+- News
+- Guitars
+- History
+- Artists
+- Footer
+- Contact
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+html {
+
+    font-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+strong {
+    font-weight: inherit;
+    font-size: inherit;
+    font-style: normal;
+}
+
+img,
+svg,
+video,
+iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #c89e67;
+}
+
+body {
+    font-family: 'Kanit';
+    background-color: black;
+    color: white;
+}
+
+/* Header 
+    Descripción: Estilos para el encabezado.
+    Estructura:
+        -header
+        -header__h1
+        -header__img
+        -header__button
+        -header__nav
+        -header__ul
+        -hidden
+        -shadow
+        -opacity
+*/
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 3.5rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: all .5s ease;
+}
+
+.header__h1 {
+    max-width: 15rem;
+    position: absolute;
+}
+
+.header__img {
+    object-fit: cover;
+}
+
+.header__button {
+    display: none;
+    cursor: pointer;
+}
+
+.header__nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 17.5rem;
+}
+
+.header__ul {
+    margin-left: 6rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+
+    font-weight: 500;
+}
+
+.header.hidden {
+    transform: translateY(-100%);
+}
+
+.shadow {
+    background: #000000d5;
+    box-shadow: 50px 50px 100px #000000,
+        -50px -50px 100px #000000;
+}
+
+.opacity {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media(max-width: 1400px) {
+    .header {
+        padding: 2.5rem;
+        justify-content: space-between;
+
+    }
+
+    .header__h1 {
+        position: relative;
+        max-width: 14rem;
+    }
+
+    .header__nav {
+        gap: 3.5rem;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .header__ul {
+        margin-left: 0;
+        gap: 3rem;
+    }
+}
+
+@media(max-width: 1200px) {
+    .header__h1 {
+        max-width: 13rem;
+    }
+
+    .header__nav {
+        gap: 1.8rem;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .header__ul {
+        gap: 1.8rem;
+    }
+}
+
+@media(max-width: 1050px) {
+    .header__h1 {
+        position: relative;
+        max-width: 12rem;
+    }
+
+    .header__nav {
+        font-size: .9rem;
+    }
+}
+
+@media(max-width: 990px) {
+    .header {
+        padding: 2.5rem;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .header__h1 {
+        max-width: 12rem;
+    }
+
+    .header__button {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 2.2rem;
+        height: 2.2rem;
+        border: 0;
+        background: transparent;
+        gap: .65rem;
+    }
+
+    .header__div {
+        background: white;
+        height: 2px;
+        width: 100%;
+        border-radius: 5px;
+        transition: all ease .5s;
+        transform-origin: left;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header__nav.active {
+        display: block;
+
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .rotate {
+        transform: rotate(45deg);
+    }
+
+    .rotate-invert {
+        transform: rotate(-45deg);
+    }
+
+    .header__ul {
+        flex-flow: column nowrap;
+        margin-bottom: 1.5rem;
+    }
+
+    .header__li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header__li::after {
+        content: '';
+        display: block;
+        margin-top: 1.5rem;
+        width: 100%;
+        height: 1px;
+        background-color: grey;
+    }
+
+    .header__nav {
+        font-size: 1rem;
+    }
+}
+
+@media(max-width: 600px) {
+    .header__h1 {
+        max-width: 10rem;
+    }
+
+    .header__nav {
+        font-size: .9rem;
+    }
+}
+
+@media(max-width: 450px) {
+    .header {
+        padding: 1.8rem;
+    }
+
+    .header__h1 {
+        max-width: 8rem;
+    }
+
+    .header__button {
+        width: 1.8rem;
+        height: 1.8rem;
+        gap: .5rem;
+    }
+}
+
+@media(max-width: 380px) {
+    .header__ul {
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .header__li::after {
+        margin-top: 1rem;
+    }
+}
+
+/* Hero
+    Descripción: Estilos para la portada de la página.
+    Estructura:
+        -hero
+        -hero__heading
+        -hero__p
+        -hero__span
+        -hide
+        -hero__wrapper
+        -hero__span
+        -hero__ul
+        -hero__svg
+        -hero__video
+*/
+.hero {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.hero__heading {
+    position: absolute;
+    left: 15%;
+    top: 40%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: start;
+    color: white;
+
+    transition: all .3s ease;
+}
+
+.heading__p {
+    width: 60%;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.heading__span {
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hero__wrapper {
+    padding: 4rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+}
+
+.hero__span {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.hero__ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+}
+
+.hero__svg {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.hero__video {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+@media(max-width: 700px) {
+    .heading__p {
+        width: 80%;
+    }
+
+    .hero__ul {
+        gap: 2rem;
+    }
+
+    .hero__span {
+        font-size: .9rem;
+    }
+
+    .hero__svg {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .hero__heading {
+        top: 30%;
+    }
+}
+
+@media(max-width: 500px) {
+    .heading__p {
+        font-size: 2.2rem;
+    }
+
+    .heading__span {
+        font-size: 1rem;
+    }
+}
+
+/* News
+    Descripción: Estilos para la sección News.
+    Estructura:
+        -news
+        -news__wrapper
+        -news__h2
+        -columns
+        -columns__article
+        -columns__date
+        -columns__a
+        -principal
+        -principal__p
+        -principal__h3
+        -principal__a
+        -articles__article
+*/
+.news {
+    min-height: 100vh;
+    display: flex;
+    background-image: url(../assets/takamine/wp7469995.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.news__wrapper {
+    width: 70%;
+    margin: auto;
+}
+
+.news__h2 {
+    color: #c89e67;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.columns {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+}
+
+.columns__article {
+    width: 35%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: start;
+    gap: .5rem;
+}
+
+.columns__date {
+    font-weight: 200;
+    display: block;
+}
+
+.columns__a {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.principal {
+    width: 90%;
+}
+
+.principal__p {
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.principal__h3 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.principal__a {
+    border: solid 1px grey;
+    padding: .5rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.principal__a:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+.articles__article {
+    width: 100%;
+}
+
+.articles__article::after {
+    content: '';
+    display: block;
+    margin-top: .5rem;
+    width: 100%;
+    height: 1px;
+    background-color: grey;
+}
+
+@media(max-width: 900px) {
+    .news__h2 {
+        font-size: 2.5rem;
+    }
+
+    .news__h2::after {
+        width: 100%;
+    }
+
+    .columns {
+        flex-flow: column nowrap;
+    }
+
+    .columns__article {
+        width: 100%;
+    }
+}
+
+@media(max-width: 700px) {
+    .news__wrapper {
+        width: 80%;
+        margin-top: 5rem;
+    }
+}
+
+@media(max-width: 600px) {
+    .news__wrapper {
+        margin-top: 4rem;
+    }
+
+    .news__h2::after {
+        width: 100%;
+    }
+
+    .principal__h2 {
+        font-size: 1.5rem;
+    }
+
+    .principal__p {
+        font-size: .9rem;
+    }
+
+    .principal__a {
+        font-size: .9rem;
+    }
+
+    .news__h2 {
+        font-size: 2rem;
+    }
+
+    .columns__date {
+        font-size: .9rem;
+    }
+}
+
+/* Guitars
+    Descripción: Estilos para la sección Guitars.
+    Estructura:
+        -guitars
+        -guitars__h2
+        -guitars__wrapper
+        -guitars__column
+        -proseries
+        -guitars__h3
+        -guitars__span
+        -guitars__p
+        -guitars__a
+        -guitars__hidden
+*/
+.guitars {
+    min-height: 80vh;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: start;
+}
+
+.guitars__h2 {
+    width: 70%;
+    margin: 3rem auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+    text-transform: uppercase;
+
+    font-size: 3rem;
+    font-weight: 800;
+    color: #c89e67
+}
+
+.guitars__h2:after {
+    content: '';
+    display: block;
+    position: absolute;
+
+    width: 25%;
+    height: 1px;
+    background-color: grey;
+    left: 38.5%;
+    z-index: -1;
+}
+
+.guitars__wrapper {
+    width: 70%;
+    margin: auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.guitars__column {
+    background-image: url(../assets/guitars/ef340s-tt/5f7696b12f43copy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    min-height: 90vh;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: end;
+    align-items: start;
+
+    margin-bottom: 4rem;
+    transition: all ease 1s;
+}
+
+.guitars__column:hover {
+    transform: scale(0.95);
+}
+
+.proseries {
+    background-image: url(../assets/guitars/ef450c-tttbb/c8c16043e8b4copy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.guitars__h3 {
+    text-transform: uppercase;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+    gap: .5rem;
+
+    font-size: 2.3rem;
+    font-weight: 300;
+    transition: all ease 1s;
+}
+
+.guitars__h3::before {
+    content: '';
+    display: block;
+
+    width: 1.5rem;
+    height: 1px;
+    background-color: white;
+}
+
+.guitars__span {
+    margin-top: -.6rem;
+    margin-left: 2rem;
+    font-weight: 200;
+    transition: all ease 1s;
+}
+
+.guitars__p {
+    margin: 1.5rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+    transition: all ease 1s;
+}
+
+.guitars__a {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    border: solid 1px grey;
+    padding: .5rem;
+    font-weight: 300;
+    transition: all ease 1s;
+}
+
+.guitars__a:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+.guitars__hidden {
+    display: none;
+}
+
+@media(max-width: 1100px) {
+    .guitars__wrapper {
+        flex-flow: column nowrap;
+    }
+
+    .guitars__column {
+        width: 100%;
+        min-height: 75vh;
+    }
+}
+
+@media(max-width: 1000px) {
+    .guitars__h2:after {
+        display: none;
+    }
+}
+
+@media(max-width: 700px) {
+    .guitars__wrapper {
+        width: 90%;
+        gap: 0rem;
+    }
+
+    .guitars__column {
+        margin-bottom: 0rem;
+    }
+}
+
+@media(max-width: 600px) {
+    .guitars {
+        margin-top: 10rem;
+    }
+
+    .guitars__column {
+        width: 100%;
+        min-height: 60vh;
+    }
+
+    .guitars__h2 {
+        font-size: 2rem;
+    }
+
+    .guitars__h3 {
+        font-size: 1.5rem;
+    }
+
+    .guitars__span {
+        font-size: .8rem;
+    }
+
+    .guitars__p {
+        font-size: .9rem;
+    }
+
+    .guitars__a {
+        font-size: .9rem;
+    }
+}
+
+/* History
+    Descripción: Estilos para la sección History.
+    Estructura:
+        -history
+        -history__wrapper        
+        -history__column        
+        -history__h3        
+        -history__p        
+        -history__a        
+*/
+.history {
+    min-height: 80vh;
+    background-image: url(../assets/takamine/bg_history.jpg);
+    background-size: cover;
+}
+
+.history__wrapper {
+    width: 70%;
+    margin: 9rem auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.history__column {
+    width: 50%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.history__h3 {
+    margin: 1rem auto;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #c89e67;
+}
+
+.history__h3::after {
+    content: '';
+    display: block;
+
+    width: 60%;
+    height: 1px;
+    background-color: grey;
+}
+
+.history__p {
+    font-size: 1.2rem;
+    font-weight: 200;
+    margin-bottom: 2rem;
+}
+
+.history__a {
+    border: solid 1px grey;
+    padding: .5rem;
+    font-weight: 300;
+}
+
+.history__a:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+@media(max-width: 1000px) {
+    .top__img {
+        display: none;
+    }
+
+    .history__text {
+        margin-top: 3rem;
+        margin-right: 1rem;
+    }
+}
+
+@media(max-width: 850px) {
+    .history__wrapper {
+        flex-flow: column nowrap;
+    }
+
+    .history__column {
+        width: 100%;
+    }
+
+    .top__img {
+        display: block;
+    }
+
+    .bottom__img {
+        width: 60%;
+        margin-top: 3rem;
+    }
+}
+
+@media(max-width: 700px) {
+    .history__wrapper {
+        width: 90%;
+    }
+}
+
+@media(max-width: 600px) {
+    .history {
+        margin-top: 15rem;
+    }
+
+    .history__h3 {
+        font-size: 1.5rem;
+    }
+
+    .history__p {
+        font-size: .9rem;
+    }
+
+    .history__a {
+        font-size: .9rem;
+    }
+}
+
+
+/* Artists
+    Descripción: Estilos para la sección Artists.
+    Estructura:
+        -artists
+        -artists__nav
+        -artists__ul
+        -artists__li
+        -artists__span
+        -aactive
+*/
+.artists {
+    min-height: 80vh;
+    width: 70%;
+    margin: 2rem auto;
+    background-image: url(../assets/artists/bruno_mars.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all ease 1s;
+}
+
+.artists__nav {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 1s;
+}
+
+.artists__ul {
+    width: 70%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+
+
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.artists__li {
+    transition: all ease 1s;
+    padding: 10px;
+}
+
+.artists__span {
+    font-size: .5rem;
+    font-weight: 300;
+}
+
+.aactive {
+    opacity: 0.1;
+}
+
+@media(max-width: 1000px) {
+    .artists__ul {
+        width: 90%;
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 700px) {
+    .artists {
+        width: 90%;
+        min-height: 50vh !important;
+    }
+
+    .artists__ul {
+        width: 90%;
+        margin: auto;
+        font-size: 1rem;
+    }
+
+    .artists__li {
+        padding: 5px;
+    }
+}
+
+/* Footer
+    Descripción: Estilos para el pie de página.
+    Estructura:
+        -footer
+        -footer__wrapper
+        -legal
+        -copyright__heading
+        -copyright__ul
+        -copyright__li
+        -rrss
+        -rrss__svg
+*/
+.footer {
+    min-height: 20vh;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__wrapper {
+    width: 70%;
+    margin: auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.legal {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    text-transform: uppercase;
+}
+
+.copyright__heading {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.copyright__ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+
+    font-size: .8rem;
+    font-weight: 200;
+}
+
+.copyright__li {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright__li::after {
+    content: '';
+    display: block;
+    margin: 0 .5rem;
+
+    width: 1px;
+    height: .6rem;
+    background-color: white;
+}
+
+.rrss {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.rrss__svg {
+    width: 1.2rem;
+    min-height: 1.2rem;
+}
+
+@media(max-width: 1100px) {
+    .legal {
+        width: 100%;
+        flex-flow: column nowrap;
+    }
+
+    .footer__wrapper {
+        flex-flow: column nowrap;
+    }
+
+    .copyright {
+        width: 100%;
+        text-align: center;
+    }
+
+    .copyright__ul {
+        flex-flow: column nowrap;
+        margin: 2rem 0;
+    }
+
+    .copyright__li {
+        width: 100%;
+        flex-flow: column nowrap;
+    }
+
+    .copyright__li::after {
+        margin: .5rem 0;
+        width: 100%;
+        height: 1px;
+        background-color: grey;
+    }
+
+    .rrss {
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media(max-width: 700px) {
+    .footer__wrapper {
+        width: 90%;
+    }
+}
+
+@media(max-width: 600px) {
+    .copyright__heading {
+        font-size: .8rem;
+    }
+
+    .copyright__li {
+        font-size: .6rem;
+    }
+}
+
+/* Contact
+    Descripción: Estilos para Contact.
+    Estructura:
+        -contact
+        -contact__button
+        -contact__svg
+        -form
+        -contact__form
+        -contact__wrapper
+        -contact__span
+        -form__group
+        -name
+        -surname
+        -label
+        -input
+        -form__span
+        -form__a
+        -form__button
+        -contact__confirm
+        -contact__p
+        -close__button
+        -form__svg
+*/
+.contact {
+    position: fixed;
+    bottom: 50px;
+    right: calc(50% - 175px);
+    background-color: #c89e67;
+    color: white;
+    padding: 15px 100px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    transition: all .5s ease;
+}
+
+.contact__button {
+    color: white;
+    background: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-family: 'Kanit';
+    cursor: pointer;
+    transition: all ease .5s;
+}
+
+.contact__svg {
+    height: 1.2rem;
+    width: 1.2rem;
+    transition: all ease .5s;
+}
+
+.contact:hover .contact__svg {
+    transform: translateX(10px);
+}
+
+.contact:hover {
+    background-color: white;
+    color: black;
+}
+
+.contact:hover .contact__button {
+    color: black;
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.contact__form {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    min-height: 100vh;
+    transform: translateX(100%);
+    overflow: hidden;
+    transition: all 1s ease;
+    background-color: #c89e67;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact__form.show {
+    transform: translateX(0%);
+}
+
+.contact__wrapper {
+    padding: 3rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+}
+
+.contact__span {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.form__group {
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    transition: all ease .5s;
+}
+
+.form__group:not(.checkbox) {
+    border-bottom: solid 1px white;
+}
+
+.form__group:focus-within {
+    border-bottom: solid 1px grey;
+}
+
+.name,
+.surname {
+    width: 48%;
+}
+
+label {
+    text-transform: uppercase;
+    font-weight: 300;
+    padding: 2px;
+}
+
+input {
+    background: none;
+    font-family: 'Kanit';
+    padding: 2px;
+    font-size: 1rem;
+    font-weight: 300;
+    outline: none;
+    border: none;
+    color: white;
+}
+
+.form__span {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 1.5rem;
+}
+
+.form__a {
+    text-decoration: underline;
+}
+
+.form__a:hover {
+    color: grey;
+}
+
+.form__button {
+    color: white;
+    background: none;
+    width: 50%;
+    text-align: start;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    font-family: 'Kanit';
+    cursor: pointer;
+    transition: all ease .5s;
+}
+
+.form__button:hover {
+    color: grey;
+}
+
+.contact__confirm {
+    padding: 3rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    display: none;
+}
+
+.contact__p.heading {
+    font-size: 1.5rem;
+}
+
+.contact__p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.close__button {
+    color: white;
+    margin: auto;
+    background: none;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'Kanit';
+    cursor: pointer;
+    transition: all ease .5s;
+}
+
+.close__button:hover {
+    color: grey;
+}
+
+.form__svg {
+    margin-top: 2rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+@media(max-width: 1200px) {
+    .contact__form {
+        width: 100%;
+    }
+}
+
+@media(max-width: 850px) {
+    .contact {
+        padding: 15px 30px;
+    }
+
+    .contact__button {
+        font-size: 1rem;
+    }
+
+    .contact__span {
+        font-size: 2rem;
+    }
+
+    .form__group {
+        font-size: .8rem;
+        gap: .5rem;
+    }
+
+    label {
+        padding: 2px;
+    }
+
+    input {
+        font-size: .8rem;
+    }
+
+    .form__span {
+        font-size: .8rem;
+    }
+
+    .form__button {
+        font-size: 2rem;
+    }
+
+    .contact {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .contact__button {
+        font-size: .8rem;
+    }
+
+    .contact__svg {
+        height: 1rem;
+        width: 1rem;
+    }
+
+    .contact__p.heading {
+        font-size: 1.4rem;
+    }
+
+    .contact__p {
+        font-size: 1rem;
+    }
+
+}
+
+@media(max-width: 550px) {
+    .contact__span {
+        font-size: 1.5rem;
+    }
+
+    .form__group {
+        font-size: .6rem;
+        gap: .5rem;
+    }
+
+    label {
+        padding: 2px;
+    }
+
+    input {
+        font-size: .6rem;
+    }
+
+    .form__span {
+        font-size: .6rem;
+    }
+
+    .form__button {
+        font-size: 1.5rem;
+    }
+
+    .contact__p.heading {
+        font-size: 1.2rem;
+    }
+
+    .contact__p {
+        font-size: .8rem;
+    }
+}
